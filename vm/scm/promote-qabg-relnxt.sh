@@ -17,10 +17,10 @@ if [[ "$branchType" == "qabg" ]]; then
   echo "$(tput setaf 2)PR Number is:  $prNumber"
 
   while true; do
-    read -p -r "$(tput setaf 3)Is $prNumber PR number is correct? yes/no: " prValid
+    read -r -p "$(tput setaf 3)Is $prNumber PR number is correct? yes/no: " prValid
     case $prValid in
     [Yy]*) break ;;
-    [Nn]*) read -p -r "Please enter correct PR number: " prNumber ;;
+    [Nn]*) read -r -p "Please enter correct PR number: " prNumber ;;
     *) echo "Please answer yes or no." ;;
     esac
   done
@@ -38,10 +38,10 @@ if [[ "$branchType" == "qabg" ]]; then
   fi
 
   while true; do
-    read -p -r "$(tput setaf 3)Is ($prNumber) PR number commit ($commitID) ID is correct? yes/no: " prValid
+    read -r -p "$(tput setaf 3)Is ($prNumber) PR number commit ($commitID) ID is correct? yes/no: " prValid
     case $prValid in
     [Yy]*) break ;;
-    [Nn]*) read -p -r "Please enter correct commid ID of PR number: " commitID ;;
+    [Nn]*) read -r -p "Please enter correct commid ID of PR number: " commitID ;;
     *) echo "Please answer yes or no." ;;
     esac
   done
@@ -77,7 +77,7 @@ elif [[ "$branchType" == "qarn" ]]; then
   git push origin "$BRANCH"
 
   while true; do
-    read -p -r "$(tput setaf 3)Do you want generate PR for release/next branch? yes/no: " prValid
+    read -r -p "$(tput setaf 3)Do you want generate PR for release/next branch? yes/no: " prValid
     case $prValid in
     [Yy]*) break ;;
     [Nn]*) exit ;;
