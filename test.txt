@@ -3,5 +3,5 @@ test2 B3-1, B3-2 HF-2, F5-3
 test3 QB3-1 HF-3, F5-1
 First HF of AS
 Test 4 - First feature branch
-Hot fix SW00123 bug (By Saket)
+QA fix SW00123 bug & Hot fix SW00321 bug (By Saket 7/30) 
 New QA Bugfix - AS - 1
